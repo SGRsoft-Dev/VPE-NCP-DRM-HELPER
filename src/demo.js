@@ -1,21 +1,22 @@
 import vpeDrmHelper from 'vpe-drm-helper';
 
+window.player = null;
+
 let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
 let userId = 'test-user';
+let dashUrl = '';
+let hlsUrl = '';
 
 //DRM Helper
 const NDRM = new vpeDrmHelper(userId);
-// 재생소스 구성
-let drmSource = NDRM.drmSourceHelper({
-    dash : 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-20231127114441-qcwdD/live.mpd',
-    hls : 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-20231127114441-qcwdD/playlist.m3u8',
-},contentId);
 
-
-
-
-window.player = null;
 document.addEventListener('DOMContentLoaded', async () => {
+
+    // 재생소스 구성
+    let drmSource = NDRM.drmSourceHelper({
+        dash : dashUrl,
+        hls : hlsUrl,
+    },contentId);
 
     window.drmPlayer = await ncplayerDRM('player',{
         playlist:[

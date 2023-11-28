@@ -239,6 +239,15 @@ https://api.ncloud-docs.com/docs/common-ncpapi
 ```bash
 $ npm install vpe-drm-helper
 ```
+### 사용 방법
+```javascript
+ //NCP DRM Helper
+import ncpDrm from 'vpe-drm-helper';
+
+//DRM Helper
+const NDRM = new ncpDrm();
+
+```
 
 ### env 파일 생성하기
 
@@ -300,17 +309,16 @@ let userId = 'test-user'; //사용자 아이디 대입
 //DRM Helper
 const NDRM = new ncpDrm(userId);
 
-// DRM Helper를 이용하여 재생소스 구성
-let drmSource = NDRM.drmSourceHelper({
-	dash : '{DASH 재생소스}',
-	hls : '{HLS 재생소스}',
-},contentId);
-
-
 window.player = null;
 document.addEventListener('DOMContentLoaded', async () => {
-
-    window.drmPlayer = await ncplayerDRM('player',{
+	
+    // DRM Helper를 이용하여 재생소스 구성
+	let drmSource = NDRM.drmSourceHelper({
+		dash : '{DASH 재생소스}',
+		hls : '{HLS 재생소스}',
+	},contentId);
+	
+	window.drmPlayer = await ncplayerDRM('player',{
         playlist:[
             {
                 drm:drmSource, //DRM Helper에서 생성된 재생소스를 입력합니다.
