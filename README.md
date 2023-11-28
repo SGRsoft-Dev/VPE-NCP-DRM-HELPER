@@ -1,4 +1,4 @@
-## NAVER CLOUD PLATFORM Video Player Enhancement + One Click Multi DRM 연동DEMO
+## NAVER CLOUD PLATFORM Video Player Enhancement + One Click Multi DRM 연동 DEMO
 
 NAVER CLOUD PLATFORM 에서 제공중인 Video Player Enhancement 를 이용하여 One Click Multi DRM 을 적용한 데모입니다.
 
@@ -28,7 +28,6 @@ NAVER CLOUD PLATFORM 에서 제공중인 Video Player Enhancement 를 이용하�
 - 네이버클라우드 플랫폼 Video Player Enhancement 유료 라이선스가 필요합니다.
 - 네이버클라우드 플랫폼 One Click Multi DRM 유료 라이선스가 필요합니다.
 - Apple FairPlay Streaming 인증서가 필요합니다.
-- 
 ***
 
 
