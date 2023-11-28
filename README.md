@@ -147,7 +147,7 @@ https://guide.ncloud-docs.com/docs/vodstation-vodstationoverview
 > Safari 브라우저는 재생 HLS / FairPlay Streaming
 
 ### 채널 상세보기
-![](https://nnbkegvqsbcu5297614.cdn.ntruss.com/profile/202311/6927d7bad086278e13e63f32d957e878.png)
+![](https://nnbkegvqsbcu5297614.cdn.ntruss.com/profile/202311/209b3e3dc66f752b3fe72b18bdb1a1dc.png)
 - 채널 상세보기에 Multi DRM Site 정보가 표시됩니다.
 - Contents ID를 DRM 토큰 생성시 필요하오니 기록해 두시기 바랍니다.
 
