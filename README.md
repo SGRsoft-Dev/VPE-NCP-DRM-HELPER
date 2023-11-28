@@ -6,7 +6,7 @@ NAVER CLOUD PLATFORM 에서 제공중인 Video Player Enhancement 를 이용하�
 
 
 ## 소스코드
-[https://github.com/SGRsoft-Dev/mediaplus.demo.vpe.basic](https://github.com/SGRsoft-Dev/mediaplus.demo.vpe.basic)
+[https://github.com/SGRsoft-Dev/VPE-NCP-DRM-HELPER](https://github.com/SGRsoft-Dev/VPE-NCP-DRM-HELPER)
 
 
 *** 
