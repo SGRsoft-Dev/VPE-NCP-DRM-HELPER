@@ -234,6 +234,14 @@ https://api.ncloud-docs.com/docs/common-ncpapi
 ## VPE DRM 토큰 생성하기
 #### DRM 콘텐츠 인증을 위한 토큰 생성 및 VPE 연동 가이드입니다.
 
+### VPE DRM Helper 사용하기
+
+```bash
+$ npm install vpe-drm-helper
+```
+
+### env 파일 생성하기
+
 > ⚠️ 주의사항<br>
 > - 해당 코드는 반드시 Backend에서 처리되어야 합니다.<br>
 
@@ -251,20 +259,18 @@ NCP_API_GW_SECRETKEY={NAVERCLOUD PLATFORM SECRET KEY}
 - NCP_APIGW_ACCESSKEY는 네이버클라우드 플랫폼 ACCESS KEY를 입력합니다.
 - NCP_API_GW_SECRETKEY는 네이버클라우드 플랫폼 SECRET KEY를 입력합니다.
 
-> ⚠️ 주의사항<br> 
+> ⚠️ 주의사항<br>
 >  - ACCESS KEY와 SECRET KEY는 절대로 노출되어선 안됩니다.<br>
 >  - .env 파일은 절대로 GIT에 업로드 되어선 안됩니다.<br>
 >  - .env 파일은 로컬에서만 사용되어야 합니다.<br>
 
 
-***
 
-## DRM Helper 사용하기
 
 ### DRM 토큰 생성하기
 ```javascript
  //NCP DRM Helper
-import ncpDrm from './ncpDrm.js';
+import ncpDrm from 'vpe-drm-helper';
 
 let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
 let userId = 'test-user'; //사용자 아이디 대입
@@ -277,27 +283,16 @@ let playreadyToken = NDRM.createToken('PLAYREADY',contentId); // 플레이레디
 let fairplayToken = NDRM.createToken('FAIRPLAY',contentId); // 페어플레이 토큰
 ```
 
-### NCP API Signature 생성하기
-```javascript
-//NCP DRM Helper
-import ncpDrm from './ncpDrm.js'; 
 
-let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
-let userId = 'test-user'; //사용자 아이디 대입
-
-//DRM Helper
-const NDRM = new ncpDrm(userId);
-
-let timestamp = moment().valueOf();
-let signature = NDRM.makeSignature('/api/v1/license',timestamp, 'POST');
-```
 
 ***
 
 ## DRM Helper를 이용하여 재생소스 구성 후 VPE Player 연동하기
+
+> ⚠️ 주의사항 : VPE SDK는 1.1.1 버전 이상을 사용해야 합니다.
 ```javascript
 //NCP DRM Helper
-import ncpDrm from './ncpDrm.js'; 
+import ncpDrm from 'vpe-drm-helper';
 
 let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
 let userId = 'test-user'; //사용자 아이디 대입

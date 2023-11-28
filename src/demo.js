@@ -1,15 +1,16 @@
-import ncpDrm from './ncpDrm.js'
+import vpeDrmHelper from 'vpe-drm-helper';
 
 let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
 let userId = 'test-user';
 
 //DRM Helper
-const NDRM = new ncpDrm(userId);
+const NDRM = new vpeDrmHelper(userId);
 // 재생소스 구성
 let drmSource = NDRM.drmSourceHelper({
     dash : 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-20231127114441-qcwdD/live.mpd',
     hls : 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-20231127114441-qcwdD/playlist.m3u8',
 },contentId);
+
 
 
 

@@ -20,5 +20,8 @@
     "dotenv-webpack": "^8.0.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "vpe-drm-helper": "^0.1.0"
   }
 }
