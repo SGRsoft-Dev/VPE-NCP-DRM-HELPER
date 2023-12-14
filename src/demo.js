@@ -2,13 +2,15 @@ import vpeDrmHelper from 'vpe-drm-helper';
 
 window.player = null;
 
-let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
+let contentId = 'ey-drm-123'; //컨텐츠 아이디 대입
 let userId = 'test-user';
-let dashUrl = '';
-let hlsUrl = '';
+let dashUrl = 'https://kho8tpmo2151.beta-edge.naverncp.com/live/video/ls-20231114151520-ICOkH/live.mpd';
+let hlsUrl = 'https://kho8tpmo2151.beta-edge.naverncp.com/live/video/ls-20231114151520-ICOkH/index.m3u8';
 
 //DRM Helper
 const NDRM = new vpeDrmHelper(userId);
+
+NDRM.setBetaMode();
 
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         dash : dashUrl,
         hls : hlsUrl,
     },contentId);
+
 
     window.drmPlayer = await ncplayerDRM('player',{
         playlist:[
