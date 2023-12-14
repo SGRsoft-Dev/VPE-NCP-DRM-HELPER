@@ -264,7 +264,7 @@ NCP_API_GW_SECRETKEY={NAVERCLOUD PLATFORM SECRET KEY}
 
 ```
 - NCP_DRM_SITEID는 One Click Multi DRM Site ID를 입력합니다.
-- NCP_APIGW_ACCESSKEY는 네이버클라우드 플랫폼 ACCESS KEY를 입력합니다.
+- NCP_API_GW_ACCESSKEY는 네이버클라우드 플랫폼 ACCESS KEY를 입력합니다.
 - NCP_API_GW_SECRETKEY는 네이버클라우드 플랫폼 SECRET KEY를 입력합니다.
 
 > ⚠️ 주의사항<br>
