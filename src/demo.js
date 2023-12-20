@@ -2,15 +2,16 @@ import vpeDrmHelper from 'vpe-drm-helper';
 
 window.player = null;
 
-let contentId = 'ey-drm-123'; //컨텐츠 아이디 대입
+let contentId = 'VIDEO24'; //컨텐츠 아이디 대입
 let userId = 'test-user';
-let dashUrl = 'https://kho8tpmo2151.beta-edge.naverncp.com/live/video/ls-20231114151520-ICOkH/live.mpd';
-let hlsUrl = 'https://kho8tpmo2151.beta-edge.naverncp.com/live/video/ls-20231114151520-ICOkH/index.m3u8';
+let dashUrl = 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-20231127114441-qcwdD/live.mpd';
+let hlsUrl = 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-20231127114441-qcwdD/playlist.m3u8';
 
 //DRM Helper
 const NDRM = new vpeDrmHelper(userId);
 
-NDRM.setBetaMode();
+NDRM.setApiKey('','');
+NDRM.setSiteId('drm-20231123231882-VnaSi')
 
 document.addEventListener('DOMContentLoaded', async () => {
 
