@@ -10,7 +10,8 @@ let hlsUrl = 'https://jdybvoww1713.edge.naverncp.com/live/video/ls-2023112711444
 //DRM Helper
 const NDRM = new vpeDrmHelper(userId);
 
-NDRM.setApiKey('','');
+//NDRM.setBetaMode();
+NDRM.setApiKey('zhEDy2tzSGB7M1bFSnxC','jAzSUVnNRRER5MRXb7LE6XVWSzzz9bbmywGMSWn7');
 NDRM.setSiteId('drm-20231123231882-VnaSi')
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         dash : dashUrl,
         hls : hlsUrl,
     },contentId);
+
+    console.log('!!!',drmSource);
 
 
     window.drmPlayer = await ncplayerDRM('player',{
